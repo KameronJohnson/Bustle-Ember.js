@@ -5,10 +5,13 @@
 <div class="row">
 
   <div class="col-md-6">
+
     {{#each}}
-    <h2>{{title}}</h2>
-    {{image}}
+
+    <h2>{{#link-to 'post' this.id}}{{title}}{{/link-to}}</h2>
+    {{#link-to 'post' this.id}}<img {{bind-attr src="image"}}>{{/link-to}}
     {{/each}}
+
   </div>
 
 
